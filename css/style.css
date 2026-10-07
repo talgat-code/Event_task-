@@ -1,4 +1,3 @@
-/* Общие стили: border-box включает рамку и внутренние отступы в размеры блока. */
 * {
     box-sizing: border-box;
 }
@@ -21,7 +20,7 @@ h3 {
 h1 { font-size: 42px; }
 a { color: #1f5a3d; }
 
-/* Общая шапка: логотип и меню. */
+/* Общая шапка: логотип и меню */
 header {
     background: white;
     border-bottom: 1px solid #d5ddd2;
@@ -63,7 +62,7 @@ header {
     color: #a8741d;
 }
 
-/* Содержимое сайта: прежние цвета, размеры и фотографии. */
+/* Содержимое сайта */
 .page-main {
     flex: 1;
     width: calc(100% - 40px);
@@ -449,17 +448,6 @@ textarea { resize: vertical; }
 .confirmation-card h1 {
     margin-top: 0;
 }
-.next-steps {
-    margin: 28px 0;
-    padding: 22px;
-    background: #fbf5e9;
-}
-.next-steps h2 {
-    margin-top: 0;
-}
-.next-steps ul {
-    padding-left: 22px;
-}
 .confirmation-buttons {
     display: flex;
     flex-wrap: wrap;
@@ -467,13 +455,6 @@ textarea { resize: vertical; }
 }
 .confirmation-buttons .secondary-button {
     margin-left: 0;
-}
-.practice-note {
-    margin: 30px 0 0;
-    padding-top: 18px;
-    border-top: 1px solid #d5ddd2;
-    color: #58665d;
-    font-size: 14px;
 }
 footer {
     padding: 24px 5%;
@@ -487,7 +468,6 @@ footer p { margin: 0; }
 /* Fixed убирает шапку и меню из потока: 67px + 56px резервируем сверху. */
 .fixed-page {
     padding-top: 123px;
-    padding-bottom: 56px;
 }
 .background-layer {
     position: fixed;
@@ -496,18 +476,15 @@ footer p { margin: 0; }
     bottom: 0;
     left: 0;
     z-index: 0;
-    background-image: url("../assets/images/tyomny-prince.webp");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.12;
+    /* Небольшая текстура повторяется без растягивания афиши на всё окно. */
+    background-image: url("../assets/images/page-background.svg");
+    background-size: 80px 80px;
+    background-repeat: repeat;
 }
 .fixed-page .page-main,
 .fixed-page footer {
     position: relative;
     z-index: 1;
-}
-.fixed-page .page-main {
-    background-color: #faf9f5;
 }
 .fixed-page header {
     position: fixed;
@@ -533,6 +510,9 @@ footer p { margin: 0; }
     position: fixed;
     right: 20px;
     bottom: 12px;
+    /* При равном z-index следующий в HTML footer закрывает эту подпись. */
+    z-index: 1;
+    margin: 0;
     padding: 6px 10px;
     background: #dbe6d6;
     font-size: 14px;
@@ -582,80 +562,6 @@ footer p { margin: 0; }
 .sticky-title-5 { top: 216px; }
 .sticky-title-6 { top: 256px; }
 
-/* Task 2 — Confirmation: одинаковые блоки; width фиксирует ширину, max-width ограничивает сверху. */
-.layout-examples {
-    margin-top: 60px;
-}
-.layout-examples section {
-    margin-top: 45px;
-}
-/* Прокручивается только пример с width:650px, а не вся страница. */
-.size-viewport {
-    overflow: auto;
-}
-.size-sample {
-    padding: 25px;
-    border: 1px solid #91a78e;
-    border-top: 6px solid #c79a3b;
-    background: white;
-}
-.size-sample h3 {
-    margin-top: 0;
-}
-.size-fixed {
-    width: 650px;
-}
-.size-fluid {
-    width: 100%;
-    max-width: 650px;
-}
-
-/* Task 3 — Confirmation: inline → block, block → inline; none убирает элемент вместе с местом. */
-.flow-example {
-    padding: 14px;
-    border: 1px solid #d5ddd2;
-    background: white;
-}
-/* Для обычного inline эти width и height игнорируются; для block работают. */
-.display-sample {
-    width: 220px;
-    height: 44px;
-    background: #f2eadc;
-}
-.as-block {
-    display: block;
-}
-.as-inline {
-    display: inline;
-}
-.is-hidden {
-    display: none;
-}
-
-/* Task 4 — Confirmation: visible, hidden, scroll, auto. У visible оставлен запас снизу. */
-.overflow-example {
-    margin-bottom: 30px;
-}
-.visible-space {
-    padding-bottom: 160px;
-}
-.overflow-box {
-    width: 300px;
-    max-width: 100%;
-    height: 112px;
-    padding: 12px;
-    border: 2px solid #91a78e;
-    background: white;
-    line-height: 24px;
-}
-.overflow-box p {
-    margin: 0;
-}
-.overflow-visible { overflow: visible; }
-.overflow-hidden { overflow: hidden; }
-.overflow-scroll { overflow: scroll; }
-.overflow-auto { overflow: auto; }
-
 /* Task 10: большой экран — три карточки, контейнер ограничен 1100px. */
 @media (min-width: 1200px) {
     .event-list {
@@ -670,9 +576,6 @@ footer p { margin: 0; }
 }
 /* Task 6: на узком экране подпись автора не закрывает кнопки справа. */
 @media (max-width: 991px) {
-    .fixed-page {
-        padding-bottom: 90px;
-    }
     .fixed-author {
         right: 12px;
         width: 100px;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events | Register</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Task 9: Grid размещает header, main, footer и колонки формы. -->
+<body class="registration-page">
+    <header>
+        <div class="header-content">
+            <a class="site-logo" href="index.html">
+                <img class="logo-icon" src="assets/images/logo.png" alt="Campus Events logo">
+                <span>Campus Events</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="registration-intro">
+            <h1>Register for an Event</h1>
+            <p>Choose an event and enter your contact information to complete the registration form.</p>
+        </section>
+
+        <section class="registration-section">
+            <form class="registration-form" action="confirmation.html" method="get">
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event information</legend>
+                    <label for="event">Choose an event</label>
+                    <select id="event" name="event" required>
+                        <option value="">Select an event</option>
+                        <option value="tyomny-prince">Tyomny Prince Concert</option>
+                        <option value="dora">Dora Concert</option>
+                        <option value="madk1d">Madk1d Concert</option>
+                        <option value="media-basket">Media Basket</option>
+                        <option value="volleyball-day">Volleyball Day</option>
+                        <option value="almaty-marathon">Almaty Marathon</option>
+                    </select>
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Add a comment if needed"></textarea>
+                </fieldset>
+
+                <label class="agreement">
+                    <input type="checkbox" name="agreement" required>
+                    I confirm that the entered information is correct.
+                </label>
+
+                <button type="submit">Complete Registration</button>
+            </form>
+
+            <aside class="registration-info">
+                <h2>Before you register</h2>
+                <p>Registration takes only a few minutes.</p>
+                <ul>
+                    <li>Check the event date and time.</li>
+                    <li>Enter an email address you can access.</li>
+                    <li>Arrive 15 minutes before the event.</li>
+                    <li>Bring your student ID if required.</li>
+                </ul>
+                <h3>Event prices</h3>
+                <p>Concert prices are shown in the event list and event details.</p>
+                <a class="secondary-button" href="events.html">View Event List</a>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Talgat and Daulet</p>
+    </footer>
+</body>
+</html>

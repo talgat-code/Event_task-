@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events | Confirmation</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a class="site-logo" href="index.html">
+                <img class="logo-icon" src="assets/images/logo.png" alt="Campus Events logo">
+                <span>Campus Events</span>
+            </a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="register.html">Register</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="confirmation-main">
+        <section class="confirmation-card">
+            <p class="confirmation-mark">✓</p>
+            <h1>Registration Form Completed</h1>
+            <p>Thank you for completing the event registration form.</p>
+
+            <section class="next-steps">
+                <h2>What happens next?</h2>
+                <ul>
+                    <li>Check the date and time of your selected event.</li>
+                    <li>Arrive 15 minutes before the event begins.</li>
+                    <li>Bring your student ID if it is required.</li>
+                </ul>
+            </section>
+
+            <div class="confirmation-buttons">
+                <a class="event-button" href="events.html">View Events</a>
+                <a class="secondary-button" href="index.html">Back to Home</a>
+            </div>
+
+            <p class="practice-note">This is a static HTML and CSS practice website. Registration details are not stored.</p>
+        </section>
+
+        <section class="layout-examples" aria-labelledby="comparison-title">
+            <h2 id="comparison-title">Confirmation layout study</h2>
+            <p>Compare how the same event reminders behave with different CSS properties.</p>
+            <nav class="category-links" aria-label="Layout comparisons">
+                <a href="#sizes">Sizes</a>
+                <a href="#display">Display</a>
+                <a href="#overflow">Overflow</a>
+            </nav>
+
+            <!-- Task 2: одинаковый текст; фиксированная ширина и максимальная ширина 650px. -->
+            <section id="sizes">
+                <h2>Width and max-width</h2>
+                <p>650px is the width limit of the original confirmation card. Narrow the window to compare.</p>
+                <h3>width: 650px</h3>
+                <div class="size-viewport" tabindex="0" role="region" aria-label="Fixed width comparison">
+                    <div class="size-sample size-fixed">
+                        <h3>Registration Form Completed</h3>
+                        <p>Check the date and time of your selected event. Arrive 15 minutes before the event begins.</p>
+                    </div>
+                </div>
+                <h3>width: 100%; max-width: 650px</h3>
+                <div class="size-viewport" tabindex="0" role="region" aria-label="Flexible width comparison">
+                    <div class="size-sample size-fluid">
+                        <h3>Registration Form Completed</h3>
+                        <p>Check the date and time of your selected event. Arrive 15 minutes before the event begins.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Task 3: пары до/после в обычном потоке, чтобы было видно действие display. -->
+            <section id="display">
+                <h2>Display: before and after</h2>
+                <p>The coloured samples declare width: 220px and height: 44px.</p>
+                <h3>Span: inline → block</h3>
+                <p>Before</p>
+                <div class="flow-example">
+                    Start →
+                    <span class="display-sample">Arrive early.</span>
+                    ← End
+                </div>
+                <p>After</p>
+                <div class="flow-example">
+                    Start →
+                    <span class="display-sample as-block">Arrive early.</span>
+                    ← End
+                </div>
+
+                <h3>Paragraph: block → inline</h3>
+                <p>Before</p>
+                <div class="flow-example">
+                    Start →
+                    <p class="display-sample">Arrive early.</p>
+                    ← End
+                </div>
+                <p>After</p>
+                <div class="flow-example">
+                    Start →
+                    <p class="display-sample as-inline">Arrive early.</p>
+                    ← End
+                </div>
+
+                <h3>Span and paragraph: display: none</h3>
+                <p>Before</p>
+                <div class="flow-example">
+                    Start →
+                    <span>Sample note.</span>
+                    <p>Extra reminder.</p>
+                    ← End
+                </div>
+                <p>After: find hidden-inline and hidden-block in the HTML.</p>
+                <div class="flow-example">
+                    Start →
+                    <span id="hidden-inline" class="is-hidden">Sample note.</span>
+                    <p id="hidden-block" class="is-hidden">Extra reminder.</p>
+                    ← End
+                </div>
+            </section>
+
+            <!-- Task 4: одна программа в четырёх блоках одинакового размера с разным overflow. -->
+            <section id="overflow">
+                <h2>Overflow and the concert programme</h2>
+                <p>All programme boxes are 300 × 112px. Use the mouse wheel or focus a scrollable box and press the arrow keys.</p>
+                <div class="overflow-example visible-space">
+                    <h3>overflow: visible</h3>
+                    <div class="overflow-box overflow-visible">
+                        <p>14:00 — Doors open</p>
+                        <p>14:15 — Introduction</p>
+                        <p>14:30 — Live performance</p>
+                        <p>15:00 — Next set</p>
+                        <p>15:20 — Music continues</p>
+                        <p>15:45 — Final tracks</p>
+                        <p>16:00 — Concert ends</p>
+                        <p>Thank you for joining us.</p>
+                    </div>
+                </div>
+                <div class="overflow-example">
+                    <h3>overflow: hidden</h3>
+                    <div class="overflow-box overflow-hidden">
+                        <p>14:00 — Doors open</p>
+                        <p>14:15 — Introduction</p>
+                        <p>14:30 — Live performance</p>
+                        <p>15:00 — Next set</p>
+                        <p>15:20 — Music continues</p>
+                        <p>15:45 — Final tracks</p>
+                        <p>16:00 — Concert ends</p>
+                        <p>Thank you for joining us.</p>
+                    </div>
+                </div>
+                <div class="overflow-example">
+                    <h3>overflow: scroll</h3>
+                    <div class="overflow-box overflow-scroll" tabindex="0" role="region" aria-label="Programme with overflow scroll">
+                        <p>14:00 — Doors open</p>
+                        <p>14:15 — Introduction</p>
+                        <p>14:30 — Live performance</p>
+                        <p>15:00 — Next set</p>
+                        <p>15:20 — Music continues</p>
+                        <p>15:45 — Final tracks</p>
+                        <p>16:00 — Concert ends</p>
+                        <p>Thank you for joining us.</p>
+                    </div>
+                </div>
+                <div class="overflow-example">
+                    <h3>overflow: auto</h3>
+                    <div class="overflow-box overflow-auto" tabindex="0" role="region" aria-label="Programme with overflow auto">
+                        <p>14:00 — Doors open</p>
+                        <p>14:15 — Introduction</p>
+                        <p>14:30 — Live performance</p>
+                        <p>15:00 — Next set</p>
+                        <p>15:20 — Music continues</p>
+                        <p>15:45 — Final tracks</p>
+                        <p>16:00 — Concert ends</p>
+                        <p>Thank you for joining us.</p>
+                    </div>
+                </div>
+                <h3>When content fits</h3>
+                <p>Compare scroll and auto below. Scrollbar appearance also depends on browser and operating system settings.</p>
+                <h3>overflow: scroll</h3>
+                <div class="overflow-box overflow-scroll fitting-content" tabindex="0" role="region" aria-label="Short reminder with overflow scroll">
+                    <p>Bring your student ID.</p>
+                </div>
+                <h3>overflow: auto</h3>
+                <div class="overflow-box overflow-auto fitting-content" tabindex="0" role="region" aria-label="Short reminder with overflow auto">
+                    <p>Bring your student ID.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made by Talgat and Daulet</p>
+    </footer>
+</body>
+</html>

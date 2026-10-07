@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events | All Events</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="fixed-page">
+    <!-- Task 8: отдельный фоновый элемент — слой 0; содержимое — 1; шапка и меню — 2. -->
+    <div class="background-layer" aria-hidden="true"></div>
+    <header>
+        <div class="header-content">
+            <a class="site-logo" href="index.html">
+                <img class="logo-icon" src="assets/images/logo.png" alt="Campus Events logo">
+                <span>Campus Events</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Tasks 6, 8: отдельное fixed-меню стоит под fixed-шапкой и выше содержимого. -->
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <main class="page-main">
+        <section class="hero">
+            <h1>All Events</h1>
+            <p>Choose from six campus events in September and October 2026.</p>
+        </section>
+
+        <section>
+            <h2>Event Calendar</h2>
+            <nav class="category-links">
+                <a href="#concerts">Concerts</a>
+                <a href="#sports">Sports</a>
+            </nav>
+        </section>
+
+        <section id="concerts">
+            <h2>Concerts</h2>
+            <!-- Task 5: метки absolute привязаны к relative-блокам event-info. -->
+            <div class="event-list">
+                <article class="event-card">
+                    <img class="event-image" src="assets/images/tyomny-prince.webp" alt="Black-and-white concert poster of Tyomny Prince">
+                    <div class="event-info">
+                        <p class="event-category concert-category">Concert</p>
+                        <h3>Tyomny Prince Concert</h3>
+                        <p>Live music, atmospheric lighting and an evening with friends.</p>
+                        <p><strong>Date:</strong> 24 Sep 2026</p>
+                        <p><strong>Time:</strong> 14:00-16:00</p>
+                        <p><strong>Place:</strong> Concert Hall</p>
+                        <p><strong>Price:</strong> 14 000 ₸</p>
+                        <a class="event-button" href="event-details.html#tyomny-prince-concert">View Details</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <img class="event-image image-dora" src="assets/images/dora.jpg" alt="Dora with pink hair holding a guitar">
+                    <div class="event-info">
+                        <p class="event-category concert-category">Concert</p>
+                        <h3>Dora Concert</h3>
+                        <p>Catchy pop-rock, heartfelt songs and a colourful live show.</p>
+                        <p><strong>Date:</strong> 26 Sep 2026</p>
+                        <p><strong>Time:</strong> 11:00-13:00</p>
+                        <p><strong>Place:</strong> Concert Hall</p>
+                        <p><strong>Price:</strong> 16 000 ₸</p>
+                        <a class="event-button" href="event-details.html#dora-concert">View Details</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <img class="event-image image-madk1d" src="assets/images/madk1d.jpg" alt="Portrait of Madk1d">
+                    <div class="event-info">
+                        <p class="event-category concert-category">Concert</p>
+                        <h3>Madk1d Concert</h3>
+                        <p>Energetic hip-hop and a lively student atmosphere.</p>
+                        <p><strong>Date:</strong> 2 Oct 2026</p>
+                        <p><strong>Time:</strong> 18:00-20:00</p>
+                        <p><strong>Place:</strong> Concert Hall</p>
+                        <p><strong>Price:</strong> 20 000 ₸</p>
+                        <a class="event-button" href="event-details.html#madk1d-concert">View Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="sports">
+            <h2>Sports</h2>
+            <div class="event-list">
+                <article class="event-card">
+                    <img class="event-image image-basket" src="assets/images/media-basket.png" alt="Media Basket players celebrating with a trophy">
+                    <div class="event-info">
+                        <p class="event-category sport-category">Basketball</p>
+                        <h3>Media Basket</h3>
+                        <p>Basketball, music and online culture in one student show.</p>
+                        <p><strong>Date:</strong> 29 Sep 2026</p>
+                        <p><strong>Time:</strong> 15:00-16:30</p>
+                        <p><strong>Place:</strong> Sports Hall</p>
+                        <a class="event-button" href="event-details.html#media-basket">View Details</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <img class="event-image" src="assets/images/volleyball-day.jpeg" alt="Yellow and blue volleyball above a player's hand">
+                    <div class="event-info">
+                        <p class="event-category sport-category">Sport</p>
+                        <h3>Volleyball Day</h3>
+                        <p>Join a friendly game with students of every skill level.</p>
+                        <p><strong>Date:</strong> 4 Oct 2026</p>
+                        <p><strong>Time:</strong> 10:00-13:00</p>
+                        <p><strong>Place:</strong> Sports Court</p>
+                        <a class="event-button" href="event-details.html#volleyball-day">View Details</a>
+                    </div>
+                </article>
+
+                <article class="event-card">
+                    <img class="event-image" src="assets/images/almaty-marathon.jpg" alt="Runner finishing the Almaty Marathon">
+                    <div class="event-info">
+                        <p class="event-category sport-category">Sport</p>
+                        <h3>Almaty Marathon</h3>
+                        <p>Join an energetic running event in Almaty and enjoy the finish-line atmosphere.</p>
+                        <p><strong>Date:</strong> 7 Oct 2026</p>
+                        <p><strong>Time:</strong> 08:30-10:00</p>
+                        <p><strong>Place:</strong> Main Gate</p>
+                        <a class="event-button" href="event-details.html#almaty-marathon">View Details</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Task 6: подпись авторов закреплена справа внизу окна. -->
+        <p class="fixed-author">Made by Talgat and Daulet</p>
+    </footer>
+</body>
+</html>

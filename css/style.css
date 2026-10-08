@@ -62,7 +62,7 @@ header {
     color: #a8741d;
 }
 
-/* Содержимое сайта */
+/* Содержимое */
 .page-main {
     flex: 1;
     width: calc(100% - 40px);
@@ -99,7 +99,7 @@ header {
 .hero-buttons .secondary-button {
     margin-left: 0;
 }
-/* object-fit: cover заполняет рамку без растяжения; object-position выбирает видимую часть фото. */
+
 .hero-image {
     display: block;
     width: 100%;
@@ -107,7 +107,7 @@ header {
     object-fit: cover;
     object-position: center top;
 }
-/* Task 1 — Home: три float-области. Их родители не являются Flex/Grid-контейнерами. */
+/* Task 1 - Home*/
 .home-page .header-content {
     display: block;
 }
@@ -121,7 +121,7 @@ header {
     width: 45%;
     padding-top: 1px;
 }
-/* Clear завершает обтекание: следующий раздел и footer будут ниже float-блоков. */
+
 .home-page .header-content::after,
 .category-list::after,
 .steps::after {
@@ -371,7 +371,7 @@ textarea {
 }
 textarea { resize: vertical; }
 .registration-form fieldset {
-    /* Разрешаем fieldset сжиматься на телефоне вместе с полями. */
+
     min-width: 0;
     margin: 0 0 25px;
     padding: 0;
@@ -423,7 +423,7 @@ textarea { resize: vertical; }
     margin-left: 0;
 }
 
-/* Подтверждение регистрации и footer. */
+/* Подтверждение регистрации и footer */
 .confirmation-main {
     flex: 1;
     width: 90%;
@@ -464,8 +464,8 @@ footer {
 }
 footer p { margin: 0; }
 
-/* Tasks 6, 8 — Events: фон 0, содержимое 1, fixed-шапка и меню 2. */
-/* Fixed убирает шапку и меню из потока: 67px + 56px резервируем сверху. */
+/* Tasks 6, 8 */
+
 .fixed-page {
     padding-top: 123px;
 }
@@ -476,7 +476,7 @@ footer p { margin: 0; }
     bottom: 0;
     left: 0;
     z-index: 0;
-    /* Небольшая текстура повторяется без растягивания афиши на всё окно. */
+
     background-image: url("../assets/images/page-background.svg");
     background-size: 80px 80px;
     background-repeat: repeat;
@@ -510,21 +510,20 @@ footer p { margin: 0; }
     position: fixed;
     right: 20px;
     bottom: 12px;
-    /* При равном z-index следующий в HTML footer закрывает эту подпись. */
     z-index: 1;
     margin: 0;
     padding: 6px 10px;
     background: #dbe6d6;
     font-size: 14px;
 }
-/* scroll-margin оставляет место при переходе к якорю, чтобы меню не закрыло нужный блок. */
+
 .fixed-page .event-button,
 .fixed-page section {
     scroll-margin-top: 140px;
     scroll-margin-bottom: 70px;
 }
 
-/* Task 7 — Event Details: sticky-меню и шесть заголовков внутри общего длинного раздела. */
+/* Task 7 — Event Details */
 .sticky-page .main-nav {
     position: sticky;
     top: 0;
@@ -632,7 +631,7 @@ footer p { margin: 0; }
         order: -1;
     }
 }
-/* Task 10: телефон — одна колонка; фиксированные и sticky-строки выше. */
+/* Task 10: телефон */
 @media (max-width: 600px) {
     .header-content {
         align-items: flex-start;

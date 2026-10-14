@@ -1,8 +1,5 @@
 /* Общие стили */
-
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     display: flex;
@@ -22,14 +19,12 @@ h1, h2, h3 {
 
 h1 {
     font-size: 42px;
+    margin-top: 0;
 }
 
-a {
-    color: #1f5a3d;
-}
+a { color: #1f5a3d; }
 
 /* Шапка */
-
 header {
     background: white;
     border-bottom: 1px solid #d5ddd2;
@@ -73,12 +68,9 @@ header {
     text-decoration: none;
 }
 
-.main-nav a:hover {
-    color: #a8741d;
-}
+.main-nav a:hover { color: #a8741d; }
 
 /* Основное содержимое */
-
 .page-main {
     flex: 1;
     width: calc(100% - 40px);
@@ -87,9 +79,7 @@ header {
     padding: 30px 0;
 }
 
-.page-main section {
-    margin-bottom: 45px;
-}
+.page-main section { margin-bottom: 45px; }
 
 .hero {
     padding: 40px;
@@ -97,17 +87,22 @@ header {
     background: #f2eadc;
 }
 
-.hero h1 {
-    margin-top: 0;
-}
-
 .hero p {
     max-width: 650px;
     font-size: 18px;
 }
 
-/* Кнопки */
+.hero-image, .event-image {
+    display: block;
+    width: 100%;
+}
 
+.hero-image, .event-image, .featured-event img, .detail-image {
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Кнопки */
 .event-button, .secondary-button {
     display: inline-block;
     margin-top: 14px;
@@ -125,17 +120,14 @@ header {
     color: white;
 }
 
-.event-button:hover {
-    background: #153f2b;
-}
+.event-button:hover { background: #153f2b; }
 
 .secondary-button {
-    margin-left: 10px;
+    margin-left: 0;
     background: white;
 }
 
 /* Главная страница */
-
 .home-hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -143,9 +135,7 @@ header {
     gap: 36px;
 }
 
-.hero-text {
-    padding: 10px;
-}
+.hero-text { padding: 10px; }
 
 .hero-buttons {
     display: flex;
@@ -154,22 +144,10 @@ header {
     margin-top: 20px;
 }
 
-.hero-buttons .secondary-button {
-    margin-left: 0;
-}
-
-.hero-image {
-    display: block;
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    object-position: center top;
-}
+.hero-image { height: 360px; }
 
 /* Task 1 */
-.home-page .header-content {
-    display: block;
-}
+.home-page .header-content { display: block; }
 
 .home-page .site-logo {
     float: left;
@@ -202,9 +180,7 @@ header {
     margin-right: 24px;
 }
 
-.category-card:last-child, .step:last-child {
-    margin-right: 0;
-}
+.category-card:last-child, .step:last-child { margin-right: 0; }
 
 .category-card, .step {
     padding: 24px;
@@ -212,9 +188,7 @@ header {
     background: white;
 }
 
-.category-card h3, .step h3 {
-    margin-top: 0;
-}
+.category-card h3, .step h3, .featured-text h3, .event-info h3 { margin-top: 0; }
 
 .step-number {
     display: block;
@@ -232,27 +206,16 @@ header {
     background: white;
 }
 
-.featured-event img {
-    width: 38%;
-    object-fit: cover;
-    object-position: center top;
-}
+.featured-event img { width: 38%; }
 
 .featured-text {
     flex: 1;
     padding: 28px;
 }
 
-.featured-text h3 {
-    margin-top: 0;
-}
-
-.featured-text p {
-    margin: 8px 0;
-}
+.featured-text p, .event-info p { margin: 8px 0; }
 
 /* Список мероприятий */
-
 .category-links {
     display: flex;
     flex-wrap: wrap;
@@ -282,29 +245,13 @@ header {
     background: white;
 }
 
-.event-image {
-    display: block;
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    object-position: center top;
-}
+.event-image { height: 230px; }
 
-.image-dora {
-    object-position: center 30%;
-}
+.image-dora { object-position: center 30%; }
+.image-basket { object-position: center 25%; }
+.image-madk1d { object-position: center 35%; }
 
-.image-basket {
-    object-position: center 25%;
-}
-
-.image-madk1d {
-    object-position: center 35%;
-}
-
-.event-info {
-    padding: 22px;
-}
+.event-info { padding: 22px; }
 
 /* Task 5 */
 .event-card .event-info {
@@ -328,14 +275,6 @@ header {
     margin-top: auto;
 }
 
-.event-info h3 {
-    margin-top: 0;
-}
-
-.event-info p {
-    margin: 8px 0;
-}
-
 .event-category {
     display: inline-block;
     margin: 0 0 10px;
@@ -356,9 +295,7 @@ header {
 }
 
 /* Task 6 */
-.fixed-page {
-    padding-top: 123px;
-}
+.fixed-page { padding-top: 123px; }
 
 .fixed-page header {
     position: fixed;
@@ -398,9 +335,7 @@ header {
     scroll-margin-bottom: 70px;
 }
 
-.fixed-page footer {
-    padding-bottom: 76px;
-}
+.fixed-page footer { padding-bottom: 76px; }
 
 /* Task 8 */
 .background-layer {
@@ -421,38 +356,22 @@ header {
 }
 
 /* Подробности мероприятий */
-
 .event-details {
     display: flex;
     gap: 25px;
-    margin-bottom: 30px;
     border: 1px solid #d5ddd2;
     border-radius: 6px;
     background: white;
 }
 
-.event-details .event-info {
-    flex: 1;
-}
+.event-details .event-info { flex: 1; }
 
 .detail-image {
     width: 360px;
     height: 300px;
-    object-fit: cover;
-    object-position: center top;
 }
 
-.detail-image.image-dora {
-    object-position: center 30%;
-}
-
-.detail-image.image-basket {
-    object-position: center 25%;
-}
-
-.event-details ul {
-    padding-left: 22px;
-}
+.event-details ul { padding-left: 22px; }
 
 /* Task 4 */
 .programme {
@@ -464,9 +383,7 @@ header {
     line-height: 24px;
 }
 
-.programme li {
-    margin-bottom: 8px;
-}
+.programme li { margin-bottom: 8px; }
 
 .programme-visible {
     overflow: visible;
@@ -475,23 +392,13 @@ header {
     background: transparent;
 }
 
-.programme-hidden {
-    overflow: hidden;
-}
+.programme-hidden { overflow: hidden; }
+.programme-scroll { overflow: scroll; }
+.programme-auto { overflow: auto; }
 
-.programme-scroll {
-    overflow: scroll;
-}
+.full-programme { margin-top: 12px; }
 
-.programme-auto {
-    overflow: auto;
-}
-
-.full-programme {
-    margin-top: 12px;
-}
-
-.full-programme summary {
+.full-programme summary, .layout-examples summary {
     color: #1f5a3d;
     font-weight: bold;
     cursor: pointer;
@@ -510,13 +417,9 @@ header {
     border-bottom: 1px solid #d5ddd2;
 }
 
-.sticky-events {
-    padding-bottom: 280px;
-}
+.sticky-events { padding-bottom: 280px; }
 
-.sticky-events .event-details {
-    margin-bottom: 30px;
-}
+.sticky-events .event-details { margin-bottom: 30px; }
 
 .sticky-title {
     position: sticky;
@@ -531,32 +434,14 @@ header {
     scroll-margin-top: 320px;
 }
 
-.sticky-title-1 {
-    top: 56px;
-}
-
-.sticky-title-2 {
-    top: 96px;
-}
-
-.sticky-title-3 {
-    top: 136px;
-}
-
-.sticky-title-4 {
-    top: 176px;
-}
-
-.sticky-title-5 {
-    top: 216px;
-}
-
-.sticky-title-6 {
-    top: 256px;
-}
+.sticky-title-1 { top: 56px; }
+.sticky-title-2 { top: 96px; }
+.sticky-title-3 { top: 136px; }
+.sticky-title-4 { top: 176px; }
+.sticky-title-5 { top: 216px; }
+.sticky-title-6 { top: 256px; }
 
 /* Регистрация */
-
 /* Task 9 */
 .registration-page {
     display: grid;
@@ -568,9 +453,7 @@ header {
         "footer";
 }
 
-.registration-page header {
-    grid-area: header;
-}
+.registration-page header { grid-area: header; }
 
 .registration-page .page-main {
     display: grid;
@@ -580,9 +463,7 @@ header {
     gap: 45px;
 }
 
-.registration-page footer {
-    grid-area: footer;
-}
+.registration-page footer { grid-area: footer; }
 
 .registration-page .header-content {
     display: grid;
@@ -601,14 +482,9 @@ header {
 }
 
 .registration-intro {
-    width: 100%;
     padding: 28px;
     border-left: 4px solid #d29c2f;
     background: #f4ecdc;
-}
-
-.registration-intro h1 {
-    margin-top: 0;
 }
 
 .registration-section {
@@ -619,13 +495,7 @@ header {
     align-self: start;
 }
 
-.registration-page .registration-intro {
-    margin-bottom: 0;
-}
-
-.registration-form, .registration-info {
-    width: 100%;
-}
+.registration-page .registration-intro { margin-bottom: 0; }
 
 .registration-form {
     padding: 30px;
@@ -646,9 +516,7 @@ input, select, textarea {
     font: inherit;
 }
 
-textarea {
-    resize: vertical;
-}
+textarea { resize: vertical; }
 
 .registration-form fieldset {
     min-width: 0;
@@ -664,20 +532,15 @@ textarea {
     font-weight: bold;
 }
 
-.registration-form input, .registration-form select, .registration-form textarea {
-    margin-bottom: 18px;
-}
+.registration-form input, .registration-form select, .registration-form textarea { margin-bottom: 18px; }
 
 .agreement {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: start;
     gap: 10px;
     margin-bottom: 20px;
     font-weight: normal;
-}
-
-.registration-page .agreement {
-    display: grid;
-    grid-template-columns: auto 1fr;
 }
 
 .agreement input {
@@ -701,20 +564,11 @@ textarea {
     background: #fbf5e9;
 }
 
-.registration-info h2 {
-    margin-top: 0;
-}
+.registration-info h2 { margin-top: 0; }
 
-.registration-info ul {
-    padding-left: 22px;
-}
-
-.registration-info .secondary-button {
-    margin-left: 0;
-}
+.registration-info ul { padding-left: 22px; }
 
 /* Подтверждение регистрации */
-
 .confirmation-main {
     flex: 1;
     width: 90%;
@@ -739,18 +593,10 @@ textarea {
     font-weight: bold;
 }
 
-.confirmation-card h1 {
-    margin-top: 0;
-}
-
 .confirmation-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-}
-
-.confirmation-buttons .secondary-button {
-    margin-left: 0;
 }
 
 /* Task 2 */
@@ -762,15 +608,7 @@ textarea {
     background: white;
 }
 
-.layout-examples summary {
-    color: #1f5a3d;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.width-viewport {
-    overflow: auto;
-}
+.width-viewport { overflow: auto; }
 
 .reminder-card {
     padding: 16px;
@@ -778,21 +616,12 @@ textarea {
     background: #fbf5e9;
 }
 
-.reminder-card h4 {
-    margin: 0 0 8px;
-}
+.reminder-card h4 { margin: 0 0 8px; }
 
-.reminder-card p {
-    margin: 0;
-}
+.reminder-card p { margin: 0; }
 
-.fixed-width {
-    width: 360px;
-}
-
-.flexible-width {
-    max-width: 360px;
-}
+.fixed-width { width: 360px; }
+.flexible-width { max-width: 360px; }
 
 /* Task 3 */
 .display-box {
@@ -807,20 +636,11 @@ textarea {
     background: #f2eadc;
 }
 
-.display-block {
-    display: block;
-}
-
-.display-inline {
-    display: inline;
-}
-
-.display-none {
-    display: none;
-}
+.display-block { display: block; }
+.display-inline { display: inline; }
+.display-none { display: none; }
 
 /* Подвал */
-
 footer {
     padding: 24px 5%;
     border-top: 3px solid #1f5a3d;
@@ -828,23 +648,16 @@ footer {
     text-align: center;
 }
 
-footer p {
-    margin: 0;
-}
+footer p { margin: 0; }
 
 /* Адаптация */
-
 /* Task 10 */
 @media (min-width: 1200px) {
-    .event-list {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+    .event-list { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    .event-list {
-        grid-template-columns: 1fr 1fr;
-    }
+    .event-list { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 991px) {
@@ -855,12 +668,8 @@ footer p {
         line-height: 1.4;
     }
 
-    .fixed-page .event-button {
-        scroll-margin-bottom: 100px;
-    }
-}
+    .fixed-page .event-button { scroll-margin-bottom: 100px; }
 
-@media (min-width: 601px) and (max-width: 991px) {
     .header-content {
         flex-direction: column;
         align-items: flex-start;
@@ -872,32 +681,30 @@ footer p {
         justify-items: start;
     }
 
-    .home-page .site-logo, .home-page .main-nav {
-        float: left;
-        width: 100%;
-    }
-
     .home-page .main-nav {
         justify-content: flex-start;
         margin-top: 12px;
         padding-top: 0;
     }
 
-    .home-hero, .registration-section {
-        grid-template-columns: 1fr;
+    .home-hero, .registration-section { grid-template-columns: 1fr; }
+
+    .event-details { flex-direction: column; }
+
+    .detail-image { width: 100%; }
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+    .home-page .site-logo, .home-page .main-nav {
+        float: left;
+        width: 100%;
     }
 
-    .event-list {
-        grid-template-columns: 1fr 1fr;
-    }
+    .event-list { grid-template-columns: 1fr 1fr; }
 
-    .step {
-        width: calc(50% - 12px);
-    }
+    .step { width: calc(50% - 12px); }
 
-    .step:nth-child(2) {
-        margin-right: 0;
-    }
+    .step:nth-child(2) { margin-right: 0; }
 
     .step:last-child {
         clear: both;
@@ -906,53 +713,25 @@ footer p {
         margin-top: 24px;
     }
 
-    .event-details {
-        flex-direction: column;
-    }
-
-    .detail-image {
-        width: 100%;
-    }
-
-    .registration-info {
-        order: -1;
-    }
+    .registration-info { order: -1; }
 }
 
 @media (max-width: 600px) {
     .header-content {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
         width: 92%;
         padding: 15px 0;
     }
 
-    .main-nav {
-        flex-wrap: wrap;
-    }
+    .main-nav { flex-wrap: wrap; }
 
     .page-main {
         width: 92%;
         padding: 20px 0;
     }
 
-    h1 {
-        font-size: 32px;
-    }
+    h1 { font-size: 32px; }
 
-    .hero {
-        padding: 25px;
-    }
-
-    .home-hero, .registration-section {
-        grid-template-columns: 1fr;
-    }
-
-    .registration-page .header-content {
-        grid-template-columns: 1fr;
-        justify-items: start;
-    }
+    .hero { padding: 25px; }
 
     .home-page .site-logo, .home-page .main-nav, .category-card, .step {
         float: none;
@@ -961,91 +740,46 @@ footer p {
         margin-right: 0;
     }
 
-    .home-page .main-nav {
-        justify-content: flex-start;
-        margin-top: 12px;
-        padding-top: 0;
-    }
+    .category-card, .step { margin-bottom: 24px; }
 
-    .category-card, .step {
-        margin-bottom: 24px;
-    }
+    .category-card:last-child, .step:last-child { margin-bottom: 0; }
 
-    .category-card:last-child, .step:last-child {
-        margin-bottom: 0;
-    }
+    .hero-text { padding: 0; }
 
-    .hero-text {
-        padding: 0;
-    }
+    .hero-image { height: 280px; }
 
-    .hero-image {
-        height: 280px;
-    }
+    .event-list { grid-template-columns: 1fr; }
 
-    .event-list {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-event {
-        flex-direction: column;
-    }
+    .featured-event { flex-direction: column; }
 
     .featured-event img {
         width: 100%;
         height: 240px;
     }
 
-    .event-details {
-        flex-direction: column;
-    }
+    .detail-image { height: 240px; }
 
-    .detail-image {
-        width: 100%;
-        height: 240px;
-    }
-
-    .registration-form {
-        padding: 22px;
-    }
-
-    .registration-info {
-        padding: 22px;
-    }
+    .registration-form, .registration-info { padding: 22px; }
 
     .confirmation-main {
         width: 92%;
         padding: 30px 0;
     }
 
-    .confirmation-card {
-        padding: 25px;
-    }
+    .confirmation-card { padding: 25px; }
 
     .confirmation-buttons a {
         width: 100%;
         text-align: center;
     }
 
-    .secondary-button {
-        margin-left: 0;
-    }
+    .fixed-page { padding-top: 129px; }
 
-    .fixed-page {
-        padding-top: 129px;
-    }
+    .fixed-page header { height: 73px; }
 
-    .fixed-page header {
-        height: 73px;
-    }
+    .fixed-page .main-nav { top: 73px; }
 
-    .fixed-page .main-nav {
-        top: 73px;
-    }
-
-    .sticky-events {
-        padding-bottom: 320px;
-    }
+    .sticky-events { padding-bottom: 320px; }
 
     .sticky-title {
         height: 48px;
@@ -1054,23 +788,9 @@ footer p {
         scroll-margin-top: 360px;
     }
 
-    .sticky-title-2 {
-        top: 104px;
-    }
-
-    .sticky-title-3 {
-        top: 152px;
-    }
-
-    .sticky-title-4 {
-        top: 200px;
-    }
-
-    .sticky-title-5 {
-        top: 248px;
-    }
-
-    .sticky-title-6 {
-        top: 296px;
-    }
+    .sticky-title-2 { top: 104px; }
+    .sticky-title-3 { top: 152px; }
+    .sticky-title-4 { top: 200px; }
+    .sticky-title-5 { top: 248px; }
+    .sticky-title-6 { top: 296px; }
 }

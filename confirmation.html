@@ -1,42 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Events | Confirmation</title>
-    <link rel="icon" type="image/png" href="assets/images/logo.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <a class="site-logo" href="index.html">
-                <img class="logo-icon" src="assets/images/logo.png" alt="Campus Events logo">
-                <span>Campus Events</span>
-            </a>
-            <nav class="main-nav">
-                <a href="index.html">Home</a>
-                <a href="events.html">Events</a>
-                <a href="register.html">Register</a>
-            </nav>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campus Events | Confirmation</title>
+        <link rel="icon" type="image/png" href="assets/images/logo.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-    <main class="confirmation-main">
-        <section class="confirmation-card">
-            <p class="confirmation-mark">✓</p>
-            <h1>Registration Form Completed</h1>
-            <p>Thank you for completing the event registration form.</p>
+    <body>
+        <header>
+            <div class="header-content">
+                <a class="site-logo" href="index.html">
+                    <img class="logo-icon" src="assets/images/logo.png" alt="Campus Events logo">
+                    <span>Campus Events</span>
+                </a>
 
-            <div class="confirmation-buttons">
-                <a class="event-button" href="events.html">View Events</a>
-                <a class="secondary-button" href="index.html">Back to Home</a>
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="events.html">Events</a>
+                    <a href="register.html">Register</a>
+                </nav>
             </div>
-        </section>
-    </main>
+        </header>
 
-    <footer>
-        <p>Made by Talgat and Daulet</p>
-    </footer>
-</body>
+        <main class="confirmation-main">
+            <section class="confirmation-card">
+                <p class="confirmation-mark">✓</p>
+                <h1>Registration Form Completed</h1>
+
+                <p>Thank you for completing the event registration form.</p>
+
+                <div class="confirmation-buttons">
+                    <a class="event-button" href="events.html">View Events</a>
+                    <a class="secondary-button" href="index.html">Back to Home</a>
+                </div>
+            </section>
+
+            <details class="layout-examples">
+                <summary>Registration reminders: layout examples</summary>
+
+                <!-- Task 2 -->
+                <section>
+                    <h2>Two reminder cards</h2>
+                    <h3>Fixed width</h3>
+                    <div class="width-viewport" tabindex="0" aria-label="Fixed-width reminder card">
+                        <article class="reminder-card fixed-width">
+                            <h4>Before the event</h4>
+
+                            <p>Check the date and time. Bring your student ID and arrive 15 minutes early.</p>
+                        </article>
+                    </div>
+
+                    <h3>Flexible width</h3>
+                    <div class="width-viewport" tabindex="0" aria-label="Flexible reminder card">
+                        <article class="reminder-card flexible-width">
+                            <h4>Before the event</h4>
+
+                            <p>Check the date and time. Bring your student ID and arrive 15 minutes early.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Task 3 -->
+                <section>
+                    <h2>Arrange the reminders</h2>
+                    <h3>A reminder on its own line</h3>
+
+                    <p>Before</p>
+                    <div class="display-box">
+                        Remember:
+                        <span class="display-sample">Bring your student ID.</span>
+                        See you there!
+                    </div>
+                    <p>After</p>
+                    <div class="display-box">
+                        Remember:
+                        <span class="display-sample display-block">Bring your student ID.</span>
+                        See you there!
+                    </div>
+
+                    <h3>A reminder in the same line</h3>
+
+                    <p>Before</p>
+                    <div class="display-box">
+                        Remember:
+                        <p class="display-sample">Arrive 15 minutes early.</p>
+                        See you there!
+                    </div>
+                    <p>After</p>
+                    <div class="display-box">
+                        Remember:
+                        <p class="display-sample display-inline">Arrive 15 minutes early.</p>
+                        See you there!
+                    </div>
+
+                    <h3>Hide completed reminders</h3>
+
+                    <p>Before</p>
+                    <div class="display-box">
+                        Ready:
+                        <span class="display-sample">Student ID packed.</span>
+                        <p class="display-sample">Event time checked.</p>
+                        Enjoy the event!
+                    </div>
+                    <p>After</p>
+                    <div class="display-box">
+                        Ready:
+                        <span class="display-sample display-none">Student ID packed.</span>
+                        <p class="display-sample display-none">Event time checked.</p>
+                        Enjoy the event!
+                    </div>
+                </section>
+            </details>
+        </main>
+
+        <footer>
+            <p>Made by Talgat and Daulet</p>
+        </footer>
+    </body>
 </html>

@@ -20,7 +20,6 @@ h3 {
 h1 { font-size: 42px; }
 a { color: #1f5a3d; }
 
-/* Общая шапка: логотип и меню */
 header {
     background: white;
     border-bottom: 1px solid #d5ddd2;
@@ -62,7 +61,6 @@ header {
     color: #a8741d;
 }
 
-/* Содержимое */
 .page-main {
     flex: 1;
     width: calc(100% - 40px);
@@ -77,6 +75,7 @@ header {
     background: #f2eadc;
 }
 .hero h1 { margin-top: 0; }
+/* Task 2 */
 .hero p {
     max-width: 650px;
     font-size: 18px;
@@ -107,7 +106,7 @@ header {
     object-fit: cover;
     object-position: center top;
 }
-/* Task 1 - Home*/
+/* Task 1 */
 .home-page .header-content {
     display: block;
 }
@@ -129,7 +128,6 @@ header {
     clear: both;
     content: "";
 }
-/* calc вычитает промежутки: две половины или три трети сохраняют прежние 24px между карточками. */
 .category-card {
     float: left;
     width: calc(50% - 12px);
@@ -155,6 +153,7 @@ header {
 .step h3 {
     margin-top: 0;
 }
+/* Task 3 */
 .step-number {
     display: block;
     margin-bottom: 10px;
@@ -199,7 +198,6 @@ header {
     text-decoration: none;
 }
 
-/* Карточки мероприятий: одинаковая высота изображений и кнопки внизу. */
 .event-list {
     display: grid;
     gap: 24px;
@@ -224,14 +222,13 @@ header {
 .image-madk1d { object-position: center 35%; }
 .event-info { padding: 22px; }
 .event-card .event-info {
-    /* Task 5: relative задаёт начало координат метки; padding сохраняет место над названием. */
+    /* Task 5 */
     position: relative;
     display: flex;
     flex: 1;
     flex-direction: column;
     padding-top: 66.8px;
 }
-/* Absolute не занимает места в потоке: метка размещена на 30px ниже верха event-info. */
 .event-card .event-category {
     position: absolute;
     top: 30px;
@@ -286,7 +283,6 @@ header {
     background: white;
 }
 
-/* Подробности мероприятий. */
 .event-details {
     display: flex;
     gap: 25px;
@@ -296,6 +292,7 @@ header {
     background: white;
 }
 .event-details .event-info { flex: 1; }
+/* Task 2 */
 .detail-image {
     width: 360px;
     height: 300px;
@@ -306,8 +303,43 @@ header {
 .detail-image.image-basket { object-position: center 25%; }
 .event-details ul { padding-left: 22px; }
 
-/* Форма регистрации. */
-/* Task 9 — Register: Grid всей страницы — header, main и footer; внутри — форма и памятка. */
+/* Task 4 */
+.programme {
+    height: 110px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #d5ddd2;
+    background: #fbf5e9;
+    line-height: 24px;
+}
+.programme li {
+    margin-bottom: 8px;
+}
+.programme-visible {
+    overflow: visible;
+    margin-bottom: 48px;
+    border-color: transparent;
+    background: transparent;
+}
+.programme-hidden {
+    overflow: hidden;
+}
+.programme-scroll {
+    overflow: scroll;
+}
+.programme-auto {
+    overflow: auto;
+}
+.full-programme {
+    margin-top: 12px;
+}
+.full-programme summary {
+    color: #1f5a3d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Task 9 */
 .registration-page {
     display: grid;
     grid-template-columns: 1fr;
@@ -339,7 +371,7 @@ header {
 .registration-intro h1 {
     margin-top: 0;
 }
-/* Две доли ширины получает форма, одну — памятка; gap сохраняет прежний промежуток. */
+
 .registration-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -356,6 +388,7 @@ header {
     border: 1px solid #d5ddd2;
     background: white;
 }
+/* Task 3 */
 label {
     display: block;
     margin-bottom: 6px;
@@ -423,7 +456,6 @@ textarea { resize: vertical; }
     margin-left: 0;
 }
 
-/* Подтверждение регистрации и footer */
 .confirmation-main {
     flex: 1;
     width: 90%;
@@ -464,7 +496,7 @@ footer {
 }
 footer p { margin: 0; }
 
-/* Tasks 6, 8 */
+/* Task 6, Task 8 */
 
 .fixed-page {
     padding-top: 123px;
@@ -523,7 +555,7 @@ footer p { margin: 0; }
     scroll-margin-bottom: 70px;
 }
 
-/* Task 7 — Event Details */
+/* Task 7 */
 .sticky-page .main-nav {
     position: sticky;
     top: 0;
@@ -553,7 +585,7 @@ footer p { margin: 0; }
     line-height: 24px;
     scroll-margin-top: 320px;
 }
-/* Меню высотой 56px; каждый следующий заголовок получает ещё 40px. */
+
 .sticky-title-1 { top: 56px; }
 .sticky-title-2 { top: 96px; }
 .sticky-title-3 { top: 136px; }
@@ -561,19 +593,19 @@ footer p { margin: 0; }
 .sticky-title-5 { top: 216px; }
 .sticky-title-6 { top: 256px; }
 
-/* Task 10: большой экран — три карточки, контейнер ограничен 1100px. */
+/* Task 10 */
 @media (min-width: 1200px) {
     .event-list {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-/* Task 10: ноутбук — две карточки, меню в строке с логотипом. */
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .event-list {
         grid-template-columns: 1fr 1fr;
     }
 }
-/* Task 6: на узком экране подпись автора не закрывает кнопки справа. */
+/* Task 6 */
 @media (max-width: 991px) {
     .fixed-author {
         right: 12px;
@@ -585,7 +617,7 @@ footer p { margin: 0; }
         scroll-margin-bottom: 100px;
     }
 }
-/* Task 10: планшет — меню ниже, шаги 2+1, памятка перед формой. */
+/* Task 10 */
 @media (min-width: 601px) and (max-width: 991px) {
     .header-content {
         flex-direction: column;
@@ -631,7 +663,7 @@ footer p { margin: 0; }
         order: -1;
     }
 }
-/* Task 10: телефон */
+/* Task 10 */
 @media (max-width: 600px) {
     .header-content {
         align-items: flex-start;
